@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+}
+
+.App {
+  font-family: "Maitree", serif;
+  text-align: center;
+  color: #43a047;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+/* Navbar */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar {
+  background: #43a047;
+  padding: 20px;
+  color: white;
+}
+
+.navbar a {
+  margin: 1rem;
+}
+
+/* gallery */
+
+.gallery {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(5, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+  justify-items: center;
+}
+
+.gallery .photo {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: left;
+  text-shadow: 0px 0px 15px black;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  aspect-ratio: 2/1;
+}
+
+.gallery .photo:hover {
+  box-shadow: 0px 0px 2px 1px black;
+}
+
+.gallery .photo svg {
+  align-self: flex-end;
+}
+
+.p-3 {
+  padding: 30px;
+}
+
+.card-container {
+  position: relative;
+}
+
+.card-container svg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.fav-container {
+  text-align: center;
+  color: #43a047;
+}
