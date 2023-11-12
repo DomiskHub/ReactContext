@@ -115,3 +115,19 @@ a:hover {
   text-align: center;
   color: #43a047;
 }
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200px;
+}
+
+.error h1 {
+  font-size: 80px;
+}
+
+.error p {
+  font-size: 20px;
+}
