@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
 }
 
 .App {
-  font-family: "Maitree", serif;
   text-align: center;
   color: #43a047;
 }
@@ -16,6 +20,10 @@ h1 {
 a {
   text-decoration: none;
   color: white;
+}
+
+a:hover {
+  color: #1b441d;
 }
 
 .navbar {
@@ -39,7 +47,6 @@ a {
 }
 
 .gallery .photo {
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -48,16 +55,18 @@ a {
   background-position: center;
   color: white;
   text-align: left;
-  text-shadow: 0px 0px 15px black;
+  text-shadow: 0px 0px 30px black;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
   aspect-ratio: 2/1;
+  transition: filter 0.3s ease;
 }
 
 .gallery .photo:hover {
-  box-shadow: 0px 0px 2px 1px black;
+  box-shadow: 0px 0px 2px 2px black;
+  filter: brightness(25%);
 }
 
 .gallery .photo svg {
@@ -72,10 +81,28 @@ a {
   position: relative;
 }
 
+.card-container p {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  color: white;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.1rem;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.736);
+}
+
 .card-container svg {
   position: absolute;
   top: 10px;
   right: 10px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.card-container svg:hover {
+  transform: scale(1.5);
 }
 
 .fav-container {

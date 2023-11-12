@@ -1,8 +1,7 @@
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Favorites from "./views/Favorites";
 import Home from "./views/Home";
-import { BrowserRouter } from "react-router-dom";
 import GlobalProvider from "./context/GlobalContext";
 
 const App = () => {

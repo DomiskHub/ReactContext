@@ -7,8 +7,9 @@ const Card = ({ photo }) => {
 
   return (
     <div className="card-container" onClick={() => toggleFav(photo)}>
+      <img className="photo" src={photo.src.medium} alt={photo.alt} />
       <IconHeart filled={photo.liked}></IconHeart>
-      <img className="photo" src={photo.src.medium} alt="photos" />
+      <p>{photo.alt}</p>
     </div>
   );
 };
