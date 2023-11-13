@@ -10,17 +10,13 @@ const GlobalProvider = ({ children }) => {
     console.log(favorites);
   }, [favorites]);
 
-  const toggleFav = (photo) => {
+  const toggleFavoritePhoto = (photo) => {
     photo.liked = !photo.liked;
-    setFavorites((favorites) => {
-      if (favorites.includes(photo)) {
-        return favorites.filter((favorite) => favorite.id !== photo.id);
-      }
-      return [...favorites, photo];
-    });
+    const exist = favorites.includes(photo);
+    exist ? setFavorites(favorites.filter((favorite) => favorite.id !== photo.id)) : setFavorites([...favorites, photo]);
   };
 
-  const state = { photos, setPhotos, favorites, toggleFav };
+  const state = { photos, setPhotos, favorites, toggleFavoritePhoto };
 
   return <GlobalContext.Provider value={state}>{children}</GlobalContext.Provider>;
 };
