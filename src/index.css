@@ -120,6 +120,10 @@ a:hover {
 .fav-container {
   text-align: center;
   color: #43a047;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .error {
